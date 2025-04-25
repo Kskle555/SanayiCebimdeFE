@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Link from 'next/link';
 export default function Footer({children}) {
   return (
     <footer className="bg-base-200 text-base-content p-10 mt-16">
@@ -29,10 +29,12 @@ export default function Footer({children}) {
           <h3 className="text-2xl font-semibold mb-4">Hızlı Bağlantılar</h3>
           <ul className="space-y-2">
             <li>
-              <a href="#" className="hover:text-blue-500">Anasayfa</a>
+              {/* <a href="#" className="hover:text-blue-500">Anasayfa</a> */}
+              <Link className='hover:text-blue-500' href="/">Anasayfa</Link>
             </li>
             <li>
-              <a href="#" className="hover:text-blue-500">Ustalar</a>
+              {/* <a href="#" className="hover:text-blue-500">Ustalar</a> */}
+              <Link className='hover:text-blue-500' href="/Ustalar">Ustalar</Link>
             </li>
             <li>
               <a href="#" className="hover:text-blue-500">Paketler</a>

@@ -5,6 +5,7 @@ import { Navbar } from "./components/ui/navbar.jsx";
 import { MoveRight } from "lucide-react";
 import { motion } from "framer-motion";
 import Footer from "./components/Footer.jsx";
+import MastarFaq from "./components/ui/MasterFaq";
 export default function Page() {
   return (
     <div className="min-h-screen bg-white text-gray-900">
@@ -51,6 +52,9 @@ export default function Page() {
               </CardContent>
             </Card>
           </section>
+
+
+          <MastarFaq className={"mt-12"}/>
         </main>
   
       <Footer
