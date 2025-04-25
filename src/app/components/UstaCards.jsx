@@ -36,13 +36,13 @@ export default function UstaCards() {
   return (
     <div>
                   {/* Usta Kartları */}
-                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                  <div className="grid grid-cols-1  sm:grid-cols-2 md:grid-cols-3 gap-8">
             {ustalar.map((usta) => (
               <div
                 key={usta.id}
                 className="bg-white rounded-2xl shadow-md hover:shadow-xl border border-base-200 transition duration-300"
               >
-                <div className="flex flex-col items-center p-6 text-center">
+                <div className="flex flex-col items-center p-6 text-center ">
                   <img
                     src={usta.resim}
                     alt={usta.ad}

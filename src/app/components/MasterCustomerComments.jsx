@@ -11,7 +11,7 @@ export default function MasterCustomerComments() {
       </div>
       <div className="p-4 bg-white rounded-lg shadow">
         <p className="text-black">"Kaporta işini mükemmel yaptı. Tavsiye ederim."</p>
-        <p className="mt-2 text-xs text-right text-black-500">- Elif K.</p>
+        <p className="mt-2 text-xs text-right text-gray-500">- Elif K.</p>
       </div>
       <div className="p-4 bg-white rounded-lg shadow">
         <p className="text-sm text-black">"Fiyat/performans çok iyiydi. Tekrar tercih ederim."</p>
