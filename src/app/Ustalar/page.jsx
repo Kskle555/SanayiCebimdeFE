@@ -1,19 +1,24 @@
 'use client'
-import React from 'react'
-import { Navbar } from '../components/ui/navbar'
-import Footer from '../components/Footer'
-import UstaCards from '../components/UstaCards'
-import UstaFilter from '../components/ui/UstaFilter'
-import FeaturedMaster from '../components/FeaturedMaster'
-import MasterCustomerComments from '../components/MasterCustomerComments'
-import MasterStatistics from '../components/MasterStatistics'
-import MasterFaq from '../components/ui/MasterFaq'
+import React, { useState } from 'react';
+import { Navbar } from '../components/ui/navbar';
+import Footer from '../components/Footer';
+import UstaCards from '../components/UstaCards';
+import FeaturedMaster from '../components/FeaturedMaster';
+import MasterCustomerComments from '../components/MasterCustomerComments';
+import MasterStatistics from '../components/MasterStatistics';
+import MasterFaq from '../components/ui/MasterFaq';
 
-const bugun = new Date().getFullYear()
+const bugun = new Date().getFullYear();
 
+export default function Page() {
+  // Filtreyi state olarak page bileşeninde tutuyoruz
+  const [filter, setFilter] = useState('');
 
+  // Filtre değiştirildiğinde filtreyi güncelleyen fonksiyon
+  const handleFilterChange = (newFilter) => {
+    setFilter(newFilter);
+  };
 
-export default function page() {
   return (
     <div className="flex flex-col min-h-screen bg-base-100">
       <Navbar
@@ -22,35 +27,24 @@ export default function page() {
       >
         SanayiSepeti
       </Navbar>
-
       <main className="flex-grow bg-white">
         <div className="container mx-auto px-4 py-10">
           <h1 className="text-4xl font-bold text-center mb-6 text-neutral">Ustalar</h1>
 
-          {/* Filtreler */}
-        <UstaFilter/>
+         
+          <FeaturedMaster onFilterChange={handleFilterChange} filter={filter} />
 
-<FeaturedMaster />
-
-      <UstaCards />
+         
+          <UstaCards filter={filter} />
         </div>
-
-<MasterCustomerComments/>
-
-<MasterStatistics/>
-
-
-
-
-<MasterFaq className={"mt-16 max-w-4xl mx-auto mb-16"}/>
-
-
-
+        <MasterCustomerComments />
+        <MasterStatistics />
+        <MasterFaq className={"mt-16 max-w-4xl mx-auto mb-16"} />
       </main>
 
       <footer className="bg-neutral text-white p-4 mt-auto">
         <Footer>{`SanayiSepeti © ${bugun}. Tüm hakları saklıdır.`}</Footer>
       </footer>
     </div>
-  )
+  );
 }
