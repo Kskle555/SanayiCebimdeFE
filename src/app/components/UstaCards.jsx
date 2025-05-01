@@ -1,7 +1,10 @@
 import React from 'react';
 import { FaStar, FaStarHalfAlt,FaMapMarker  } from 'react-icons/fa'; 
 import { useState } from 'react';
+
+
 export default function UstaCards({filter}) {
+
   const ustalar = [
     {
       id: 1,

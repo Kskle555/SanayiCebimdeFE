@@ -11,11 +11,12 @@ import MasterFaq from '../components/ui/MasterFaq';
 const bugun = new Date().getFullYear();
 
 export default function Page() {
-  // Filtreyi state olarak page bileşeninde tutuyoruz
+  // Filtreyi state olarak page bileşeninde tut
   const [filter, setFilter] = useState('');
 
   // Filtre değiştirildiğinde filtreyi güncelleyen fonksiyon
   const handleFilterChange = (newFilter) => {
+    console.log(newFilter);
     setFilter(newFilter);
   };
 
