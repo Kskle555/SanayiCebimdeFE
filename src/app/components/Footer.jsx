@@ -6,7 +6,7 @@ export default function Footer({children}) {
       <div className="footer grid md:grid-cols-3 gap-10">
         {/* Company Info Section */}
         <div>
-          <h3 className="text-2xl font-semibold mb-4">SanayiSepeti</h3>
+          <h3 className="text-2xl font-semibold mb-4">Sanayi Cebimde</h3>
           <p className="text-sm text-gray-500 mb-4">
             Sanayi dünyasında güvenilir ustalarla hızlı ve kolay iletişim kurmanızı sağlıyoruz. 
             Aracınızın ihtiyacına göre en uygun bakım ve onarım paketlerini seçin.

@@ -10,7 +10,7 @@ export function WhyUs() {
 
   return (
     <section className="py-16  text-center max-w-6xl mx-auto px-6">
-      <h2 className="text-4xl font-bold mb-10">Neden SanayiSepeti?</h2>
+      <h2 className="text-4xl font-bold mb-10">Neden Sanayi Cebimde?</h2>
       <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
         {benefits.map((item, idx) => (
           <div key={idx} className="flex flex-col items-center gap-4 p-6 border rounded-lg shadow hover:shadow-lg transition cursor-default">

@@ -1,12 +1,12 @@
 export function FAQ() {
     const faqs = [
       {
-        question: "SanayiSepeti nedir?",
-        answer: "SanayiSepeti, aracınız için güvenilir ustaları kolayca bulabileceğiniz bir platformdur."
+        question: "Sanayi Cebimde nedir?",
+        answer: "Sanayi Cebimde, aracınız için güvenilir ustaları kolayca bulabileceğiniz bir platformdur."
       },
       {
         question: "Teklif almak ücretsiz mi?",
-        answer: "Evet, SanayiSepeti üzerinden teklif almak tamamen ücretsizdir."
+        answer: "Evet, Sanayi Cebimde üzerinden teklif almak tamamen ücretsizdir."
       },
       {
         question: "Hangi şehirlerde hizmet veriyorsunuz?",

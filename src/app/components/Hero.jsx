@@ -16,7 +16,7 @@ export function Hero() {
 
           <h1 className="text-5xl font-extrabold text-gray-900 leading-tight mb-6">
             Güvenilir Usta, Hızlı Hizmet <br className="hidden md:block" />
-            <span className="text-primary">SanayiSepeti</span> ile!
+            <span className="text-primary">Sanayi Cebimde</span> ile!
           </h1>
 
           <p className="text-lg text-gray-600 mb-8 max-w-xl">
