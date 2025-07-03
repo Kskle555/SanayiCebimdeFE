@@ -27,7 +27,7 @@ export const Navbar = ({ children, className, buttonLabels }) => {
      
         {/* Hamburger Menu Button (Mobile) */}
         <div className="md:hidden">
-          <button onClick={() => setIsOpen(!isOpen)} className={`z-50 text-white focus:outline-none ${isOpen ? 'fixed top-6 right-6' : ''}`}>
+          <button onClick={() => setIsOpen(!isOpen)} className={`z-50 text-white cursor-pointer focus:outline-none ${isOpen ? 'fixed top-6 cursor-pointer right-6' : ''}`}>
             {isOpen ? <X className="h-6 w-6 top-6" /> : <List className="h-6 w-6" />}
           </button>
         </div>
@@ -35,7 +35,7 @@ export const Navbar = ({ children, className, buttonLabels }) => {
        
         {labellist.map((label, index) => (
        <Link key={index} href={label.href}>
-          <button className="text-white hover:text-blue-500 bg-transparent px-4 py-2.5 rounded-md focus:outline-none">
+          <button className="text-white hover:text-blue-500 bg-transparent cursor-pointer px-4 py-2.5 rounded-md focus:outline-none">
             {label.label}
           </button>
             </Link>
