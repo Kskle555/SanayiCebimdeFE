@@ -11,6 +11,7 @@ import { StatisticsSection } from "./components/StatisticsSection.jsx";
 import { LatestArticles } from "./components/LatestArticles.jsx";
 import { CtaForMasters } from "./components/CtaForMasters.jsx";
 import { LocationSearch } from "./components/LocationSearch.jsx";
+import { AiFaultFinder } from "./components/AiFaultFinder.jsx";
 
 export default function Page() {
   return (
@@ -22,6 +23,7 @@ export default function Page() {
            
             <Hero/>
             <LocationSearch/>
+          
             <WhyUs/>
             <Packages/>
           <HowItWorks/>
@@ -29,6 +31,7 @@ export default function Page() {
           <StatisticsSection/>
           <Testimonial/>
           <CtaForMasters/>
+            <AiFaultFinder/>
            <LatestArticles/>
           <FAQ/>
     
