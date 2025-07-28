@@ -38,11 +38,12 @@ export default function RegisterPage() {
 
       if (!response.ok) {
         const errorData = await response.json().catch(() => ({ message: "Kayıt başarısız. Lütfen bilgilerinizi kontrol edin." }));
+        console.log(`status ${response.status}`);
         throw new Error(errorData.message || `Bir hata oluştu: ${response.statusText}`);
       }
 
       alert("Kayıt başarılı! Giriş sayfasına yönlendiriliyorsunuz.");
-      router.push("/login");
+      router.push("/Login");
 
     } catch (err) {
       setError(err.message);
@@ -113,7 +114,7 @@ export default function RegisterPage() {
             <div className="text-center">
               <span className="text-sm text-gray-500 dark:text-gray-400">
                 Zaten bir hesabın var mı?{' '}
-                <Link href="/login" className="link link-primary">
+                <Link href="/Login" className="link link-primary">
                   Giriş Yap
                 </Link>
               </span>

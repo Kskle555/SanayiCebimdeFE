@@ -32,6 +32,7 @@ export default function LoginPage() {
        
       }
 
+      
       if (!response.ok) {
         const errorData = await response.json().catch(() => ({ message: "Giriş başarısız. Lütfen bilgilerinizi kontrol edin." }));
         throw new Error(errorData.message || `Bir hata oluştu: ${response.statusText}`);
@@ -119,7 +120,7 @@ export default function LoginPage() {
             <div className="text-center">
               <span className="text-sm text-gray-500 dark:text-gray-400">
                 Hesabın yok mu?{' '}
-                <Link href="/register" className="link link-primary">
+                <Link href="/Register" className="link link-primary">
                   Kayıt Ol
                 </Link>
               </span>
