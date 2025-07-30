@@ -20,7 +20,7 @@ export const Navbar = ({ children, className, buttonLabels }) => {
   ];
 
   return (
-    <header className={`${className}`}>
+    <header data-theme="dark" className={`${className} bg-base-200`}>
       <div className="flex space-x-4">
       <h1 className="text-2xl font-bold">{children}</h1>
       </div>

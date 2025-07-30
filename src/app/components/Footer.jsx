@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 export default function Footer({children}) {
   return (
-    <footer className="bg-base-200 text-base-content p-10 mt-16">
+    <footer data-theme="dark" className="bg-base-200 text-base-content p-10 mt-16">
       <div className="footer grid md:grid-cols-3 gap-10">
         {/* Company Info Section */}
         <div>

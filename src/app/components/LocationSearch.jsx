@@ -22,7 +22,7 @@ export const LocationSearch = () => {
         Size en yakın ve güvenilir ustaları keşfedin.
       </p>
       <div className="flex flex-col md:flex-row items-center justify-center gap-4 max-w-xl mx-auto text-white">
-        <select className=" select select-bordered  w-full md:w-auto flex-grow">
+        <select data-theme="dark" className=" select select-bordered  w-full md:w-auto flex-grow">
           <option defaultValue={"Şehir Seçin"}>Şehir Seçin</option>
           {cities.map((city, index) => (
             <option key={index}>{city}</option>
