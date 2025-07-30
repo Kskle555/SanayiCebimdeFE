@@ -8,54 +8,21 @@ import { useRouter } from "next/navigation";
 
 
 
+
+
 export default function LoginPage() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
-const router = useRouter();
+  const router = useRouter();
 
 
-  const ROLE_ROUTES = {
-  Admin: "/admin",
-  Administrator: "/admin",
-  Manager: "/manager",
-  Technician: "/technician",
-  Tech: "/technician",
-  User: "/dashboard",
-};
 
-const decodeJwtPayload = (token) =>{
-   if (!token) return null;
-  try {
-    const payloadPart = token.split(".")[1];
-    if (!payloadPart) return null;
-    const base64 = payloadPart.replace(/-/g, "+").replace(/_/g, "/");
-    const json = JSON.parse(atob(base64));
-    return json;
-  } catch {
-    return null;
-  }
-}
 
-const extractRoleFrom=(data)=>{
-// 1) Body içi (user.role / user.roles[0])
-  let role =
-    data?.user?.role ??
-    (Array.isArray(data?.user?.roles) ? data.user.roles[0] : undefined);
 
-  // 2) JWT claim'leri
-  if (!role && data?.token) {
-    const p = decodeJwtPayload(data.token) || {};
-    role =
-      p.role ??
-      (Array.isArray(p.roles) ? p.roles[0] : undefined) ??
-      p["http://schemas.microsoft.com/ws/2008/06/identity/claims/role"] ??
-      p["http://schemas.xmlsoap.org/ws/2005/05/identity/claims/role"];
-  }
 
-  return role;
-}
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -65,49 +32,25 @@ const extractRoleFrom=(data)=>{
     try {
 
 
-      const response = await fetch("api/login", {
+      const response = await fetch("/api/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({ username, password }),
+        credentials: "include", // cookie'leri göndermek için
       });
 
-      // Gövdeyi tek seferde güvenle çöz
-      const text = await response.text();
-      console.log(`gelen mesaj : ${text}`);
-      let data = null;
-      try {
-        data = text ? JSON.parse(text) : null;
-        console.log("Parsed data:", data);
-      } catch {
-        data = null;
+     const data = await response.json();
+
+      if (!response.ok) {
+        alert(data.message || "Giriş başarısız.");
+        throw new Error(data.message || "Giriş başarısız.");
+        
       }
-
-       if (!response.ok) {
-        const msg =
-          data?.message ||
-          (response.status === 401
-            ? "Kullanıcı adı veya şifre hatalı."
-            : `Bir hata oluştu (${response.status}).`);
-        throw new Error(msg);
-      }
-
-
-       if (!data?.token) {
-        throw new Error("Giriş başarılı görünüyor ama token gelmedi.");
-      }
-
-        const role = extractRoleFrom(data);
-      // Persist (ilk aşama – prod’da HttpOnly cookie yapılacak)
-      localStorage.setItem("token", data.token);
-      if (data.user) localStorage.setItem("user", JSON.stringify(data.user));
-      if (role) localStorage.setItem("role", role);
-
-
-      // yönlendirme
-       const target = (role && ROLE_ROUTES[role]) || "/dashboard";
-      router.push(target);
+      console.log("Giriş başarılı:", data);
+      console.log("jwt secret exists", !!process.env.JWT_SECRET);
+      router.push("/");
 
     } catch (err) {
       setError(err.message);
