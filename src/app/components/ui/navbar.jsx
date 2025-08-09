@@ -3,7 +3,6 @@
 // ui/Navbar.jsx
 
 import Link from "next/link";
-import { Button } from "./Button";
 import { useState } from "react";
 import { List,X } from "lucide-react";
 export const Navbar = ({ children, className, buttonLabels }) => {
