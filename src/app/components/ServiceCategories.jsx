@@ -1,5 +1,5 @@
 import React from 'react';
-import { Wrench, Car, BatteryCharging, CircleDot, Snowflake, Gauge } from 'lucide-react';
+import { Wrench, Car, BatteryCharging, CircleDot, Snowflake, Gauge,Activity} from 'lucide-react';
 
 const categories = [
   { name: 'Periyodik Bakım', icon: <Wrench className="w-10 h-10" /> },
@@ -8,6 +8,7 @@ const categories = [
   { name: 'Lastik & Jant', icon: <CircleDot className="w-10 h-10" /> },
   { name: 'Klima Sistemleri', icon: <Snowflake className="w-10 h-10" /> },
   { name: 'Ekspertiz', icon: <Gauge className="w-10 h-10" /> },
+  {name:'Araç Muayenesi', icon: <Activity className="w-10 h-10" /> }
 ];
 
 export const ServiceCategories = () => {
