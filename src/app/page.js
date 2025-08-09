@@ -38,9 +38,9 @@ export default function Page() {
       
         </main>
   
-      <Footer
-      children={"SanayiSepeti © 2025. Tüm hakları saklıdır."}
-      />
+     <Footer>
+  SanayiSepeti © 2025. Tüm hakları saklıdır.
+</Footer>
       </div>
   );
 }
