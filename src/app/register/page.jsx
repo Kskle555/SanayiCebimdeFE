@@ -27,8 +27,8 @@ export default function RegisterPage() {
     setLoading(true);
 
     try {
-  
-      const response = await fetch("https://localhost:7173/api/Auth/register", {
+  // https://localhost:7173/api/Auth/register
+      const response = await fetch("https://api.sanayicebimde.net/api/Auth/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

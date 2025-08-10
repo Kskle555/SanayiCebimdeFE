@@ -5,8 +5,8 @@ export async function POST(req) {
     const { username, password } = await req.json();
     console.log("Login request:", { username, password });
 
-
-    const res = await fetch("http://localhost:5002/api/Auth/Login", {
+// http://localhost:5002/api/Auth/Login
+    const res = await fetch("https://api.sanayicebimde.net/api/Auth/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ username, password }),
