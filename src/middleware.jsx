@@ -73,7 +73,7 @@ export async function middleware(req) {
   // Token yoksa login'e
   if (!token) {
     const url = req.nextUrl.clone();
-    url.pathname = "/Login";
+    url.pathname = "/login";
     url.searchParams.set("redirect", pathname); // istersek geri döndürürüz
    
     return NextResponse.redirect(url);
@@ -83,7 +83,7 @@ export async function middleware(req) {
   const payload = await verifyJwt(token);
   if (!payload) {
     const url = req.nextUrl.clone();
-    url.pathname = "/Login";
+    url.pathname = "/login";
     return NextResponse.redirect(url);
   }
 
