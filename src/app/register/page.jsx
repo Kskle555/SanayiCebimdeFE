@@ -43,7 +43,7 @@ export default function RegisterPage() {
       }
 
       alert("Kayıt başarılı! Giriş sayfasına yönlendiriliyorsunuz.");
-      router.push("/Login");
+      router.push("/login");
 
     } catch (err) {
       setError(err.message);
