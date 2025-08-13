@@ -23,7 +23,7 @@ export function Hero() {
             Konumuna en yakın, onaylı ve yorumlu ustalara saniyeler içinde ulaş. Üstelik fiyat teklifi doğrudan cebine gelsin!
           </p>
 
-          <div className="flex flex-wrap gap-4 mb-6">
+          <div className="flex flex-wrap gap-4 mb-6 justify-center">
             <button className="btn btn-primary btn-lg flex items-center gap-2">
               <FaRocket /> Hemen Başla
             </button>
@@ -43,8 +43,7 @@ export function Hero() {
         <img
   src="https://media.istockphoto.com/id/1347150429/photo/professional-mechanic-working-on-the-engine-of-the-car-in-the-garage.jpg?s=2048x2048&w=is&k=20&c=IG4VlgJ9eN3od_gGzyfFvsAf4WPWO2SfIxByaHarf8M="
   alt="Usta ve araç"
-  className="w-full max-w-5xl mx-auto md:mx-0 rounded-xl shadow-2xl"
-/>
+  className="w-full max-w-5xl mx-auto md:mx-0 rounded-xl shadow-2xl"/>
 
 
           {/* Arka plan blur top efekti */}
