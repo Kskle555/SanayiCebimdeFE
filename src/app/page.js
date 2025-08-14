@@ -12,6 +12,7 @@ import { LatestArticles } from "./components/LatestArticles.jsx";
 import { CtaForMasters } from "./components/CtaForMasters.jsx";
 import { LocationSearch } from "./components/LocationSearch.jsx";
 import { AiFaultFinder } from "./components/AiFaultFinder.jsx";
+import ContactBanner from "./components/ContactBanner.jsx";
 
 export default function Page() {
   return (
@@ -20,7 +21,7 @@ export default function Page() {
       Sanayi Cebimde
       </Navbar>
         <main className="px-6 py-16 max-w-6xl mx-auto text-center">
-           
+           <ContactBanner/>
             <Hero/>
             <LocationSearch/>
           

@@ -2,7 +2,9 @@ import { FaCheckCircle, FaRocket, FaSearch } from "react-icons/fa";
 
 export function Hero() {
   return (
-    <section className="bg-white py-24 relative overflow-hidden">
+    <section className="bg-white py-24 relative overflow-hidden mt-5">
+      <div className="bg-green-400">
+      </div>
       {/* Arka plan efekt balonu */}
       <div className="absolute top-[-50px] left-[-50px] w-[300px] h-[300px] bg-primary opacity-10 rounded-full blur-3xl z-0 animate-pulse"></div>
 
