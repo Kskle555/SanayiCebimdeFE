@@ -5,6 +5,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { List,X } from "lucide-react";
+import Image from "next/image";
 export const Navbar = ({ children, className, buttonLabels }) => {
 
   const [isOpen, setIsOpen] = useState(false);
@@ -33,7 +34,13 @@ export const Navbar = ({ children, className, buttonLabels }) => {
           </button>
         </div>
       <nav className={`${isOpen ? "hidden" : "block"} md:flex hidden space-x-4 items-center justify-between w-full md:w-auto`}>
-       
+       {/* <Image
+         src="/logo2.png"
+         alt="Logo"
+         width={50}
+         height={50}
+         className="rounded-full"
+       /> */}
         {labellist.map((label, index) => (
        <Link key={index} href={label.href}>
           <button className="text-white hover:text-blue-500 bg-transparent cursor-pointer px-4 py-2.5 rounded-md focus:outline-none">

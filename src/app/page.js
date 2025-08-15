@@ -13,7 +13,7 @@ import { CtaForMasters } from "./components/CtaForMasters.jsx";
 import { LocationSearch } from "./components/LocationSearch.jsx";
 import { AiFaultFinder } from "./components/AiFaultFinder.jsx";
 import ContactBanner from "./components/ContactBanner.jsx";
-
+import Image from "next/image.js";
 export default function Page() {
   return (
     <div className="min-h-screen bg-white text-gray-900">
