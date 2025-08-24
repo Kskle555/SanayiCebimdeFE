@@ -2,6 +2,6 @@ import React from 'react'
 
 export default function page() {
   return (
-    <div>Admin Page</div>
+    <div>Admin Page 2</div>
   )
 }
