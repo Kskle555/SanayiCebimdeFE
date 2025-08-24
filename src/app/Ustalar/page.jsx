@@ -7,10 +7,9 @@ import FeaturedMaster from '../components/FeaturedMaster';
 import MasterCustomerComments from '../components/MasterCustomerComments';
 import MasterStatistics from '../components/MasterStatistics';
 import MasterFaq from '../components/ui/MasterFaq';
-import { useEffect } from 'react';
 import useUstalarStore from '../store/useUstalarStore';
 
-
+//git
 const bugun = new Date().getFullYear();
 
 export default function Page() {
