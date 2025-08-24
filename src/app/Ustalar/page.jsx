@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import { Navbar } from '../components/ui/navbar';
 import Footer from '../components/Footer';
 import UstaCards from '../components/UstaCards';
@@ -7,10 +7,20 @@ import FeaturedMaster from '../components/FeaturedMaster';
 import MasterCustomerComments from '../components/MasterCustomerComments';
 import MasterStatistics from '../components/MasterStatistics';
 import MasterFaq from '../components/ui/MasterFaq';
+import { useEffect } from 'react';
+import useUstalarStore from '../store/useUstalarStore';
+
 
 const bugun = new Date().getFullYear();
 
 export default function Page() {
+
+  const { ustalar, isLoading, error, fetchUstalar } = useUstalarStore();
+
+  useEffect(() => {
+    fetchUstalar();
+  }, [fetchUstalar]);
+
   // Filtreyi state olarak page bileşeninde tut
   const [filter, setFilter] = useState('');
 
