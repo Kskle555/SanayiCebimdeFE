@@ -1,8 +1,8 @@
 import React from 'react';
 import { FaStar, FaStarHalfAlt,FaMapMarker  } from 'react-icons/fa'; 
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 import { mockUstaData } from '../data/mockUstaData';
-
+import useUstalarStore from '../store/useUstalarStore';
 
 export default function UstaCards({filter}) {
 
@@ -119,10 +119,18 @@ export default function UstaCards({filter}) {
   //   },
   // ];
 
-  const ustalar = mockUstaData;
+  const ustalar2 = mockUstaData;
  
-  
+   const { ustalar, isLoading, error, fetchUstalar } = useUstalarStore();
 
+  useEffect(() => {
+    fetchUstalar();
+   
+  }, []);
+
+  useEffect(()=>{
+console.log("ustalar güncellendi:", ustalar);
+  },[ustalar])
    // Filtreleme işlemleri
    let filteredUstalar = [...ustalar];
 
@@ -140,7 +148,7 @@ export default function UstaCards({filter}) {
        {filteredUstalar.map((usta) => (
          <div key={usta.id} className="bg-white rounded-lg shadow-md overflow-hidden max-w-sm w-full">
            <div className="relative">
-             <img src={usta.image} alt={usta.name} className="w-full h-64 object-cover" />
+             <img src={usta.imageURL} alt={usta.name} className="w-full h-64 object-cover" />
            </div>
            <div className="p-4">
              <h2 className="text-xl font-semibold text-gray-800 mb-2">{usta.name}</h2>

@@ -18,7 +18,8 @@ export default function Page() {
 
   useEffect(() => {
     fetchUstalar();
-  }, [fetchUstalar]);
+   
+  }, []);
 
   // Filtreyi state olarak page bileşeninde tut
   const [filter, setFilter] = useState('');
@@ -41,7 +42,7 @@ export default function Page() {
         <div className="container mx-auto px-4 py-10">
           <h1 className="text-4xl font-bold text-center mb-6 text-neutral">Ustalar</h1>
 
-         
+         {/* {ustalar.map((x)=>(<div key={x.id}><h1 className='text-red-500'>{x.name}</h1></div>))} */}
           <FeaturedMaster onFilterChange={handleFilterChange} filter={filter} />
 
          

@@ -7,14 +7,14 @@ const useUstalarStore = create((set) => ({
   isLoading: false,
   error: null,
 
-  fetchProducts: async () => {
+  fetchUstalar: async () => {
     set({ isLoading: true, error: null })
     try {
-      const res = await axios.get('/api/ustalar') // ←
+      const res = await axios.get('https://localhost:7173/ustalar') // ←
       set({ ustalar: res.data, isLoading: false })
     } catch (err) {
       set({ error: err.message || 'Veri çekme hatası', isLoading: false })
     }
-  },
+  }
 }))
 export default useUstalarStore
