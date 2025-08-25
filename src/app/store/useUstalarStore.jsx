@@ -10,7 +10,7 @@ const useUstalarStore = create((set) => ({
   fetchUstalar: async () => {
     set({ isLoading: true, error: null })
     try {
-      const res = await axios.get('https://api.sanayicebimde.net/api/ustalar') // ←
+      const res = await axios.get('https://api.sanayicebimde.net/ustalar') // ←
       set({ ustalar: res.data, isLoading: false })
     } catch (err) {
       set({ error: err.message || 'Veri çekme hatası', isLoading: false })
