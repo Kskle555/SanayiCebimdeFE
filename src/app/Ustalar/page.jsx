@@ -17,7 +17,7 @@ export default function Page() {
   const { ustalar, isLoading, error, fetchUstalar } = useUstalarStore();
 
   useEffect(() => {
-    fetchUstalar();
+     if (fetchUstalar) fetchUstalar();
    
   }, []);
 
