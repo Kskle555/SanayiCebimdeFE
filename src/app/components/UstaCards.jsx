@@ -11,16 +11,17 @@ export default function UstaCards({ filter }) {
   }, [fetchUstalar]);
 
   // API'den gelen veriyi component'te kullanacağımız alanlara map et
-  const mappedUstalar = ustalar.map(u => ({
+const mappedUstalar = ustalar.map(u => ({
     id: u.id,
-    name: u.ad,
-    profession: u.brans,
-    location: u.sehir,
-    rating: u.puan,
-    description: u.aciklama,
-    imageURL: u.resim,
-    googleMapsLink: u.googleMapsLink
-  }));
+    name: u.name,
+    profession: u.profession,
+    location: u.location,
+    rating: u.rating,
+    description: u.description,
+    imageURL: u.imageURL,
+    googleMapsLink: u.googleMapsLink || "#" // Eğer API vermiyorsa fallback
+}));
+
 
   // Filtreleme işlemleri
   let filteredUstalar = [...mappedUstalar];
@@ -43,11 +44,13 @@ export default function UstaCards({ filter }) {
             <h2 className="text-xl font-semibold text-gray-800 mb-2">{usta.name}</h2>
             <p className="text-sm text-gray-600">{usta.profession} - {usta.location}</p>
             <div className="flex items-center mb-2">
-              <div className="flex text-yellow-400">
-                {[...Array(Math.floor(usta.rating))].map((_, index) => (
-                  <FaStar key={index} />
-                ))}
-              </div>
+             <div className="flex text-yellow-400">
+          {Array.from(
+          { length: Math.floor(usta.rating || 0) },
+          (_, index) => <FaStar key={index} />
+          )}
+          </div>
+
               <span className="text-gray-600 text-sm ml-2">({usta.rating}/5)</span>
               <div className="flex items-center ml-auto">
                 <FaMapMarker style={{ color: '#007bff' }} className="text-gray-600 text-sm -mr-1.5" />
