@@ -119,6 +119,11 @@ export default function RegisterPage() {
                 </Link>
               </span>
             </div>
+                 <div className="text-center">
+              <span className="text-sm text-gray-500 dark:text-gray-400">
+               Anasayfaya geri dönmek için <Link href="/" className="link link-primary">buraya tıklayın</Link>.
+              </span>
+            </div>
           </form>
         </CardContent>
       </Card>

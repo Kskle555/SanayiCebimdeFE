@@ -17,8 +17,8 @@ export const Navbar = ({ children, className, buttonLabels }) => {
     { label: "Paketler", href: "/paketler" },
     { label: "İletişim", href: "/iletişim" },
     {label:"Hakkımızda", href: "/hakkimizda"},
-    { label: "Giriş Yap", href: "/login" },
-    { label: "Kayıt Ol", href: "/register" },
+    { label: "Giriş Yap", href: "/Login" },
+    { label: "Kayıt Ol", href: "/Register" },
   ];
 
   return (
