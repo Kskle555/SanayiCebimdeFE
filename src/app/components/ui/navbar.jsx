@@ -29,11 +29,11 @@ export default function Navbar({
   };
 
   return (
-    <header className="w-full border-b border-[#29382f] bg-transparent">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
-        <div className="flex items-center justify-between h-16">
+    <header data-theme="dark" className="w-full border-b border-[#29382f]">
+      <div  className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
+        <div   className="flex items-center justify-between h-16">
           {/* Left: Logo + Desktop Nav */}
-          <div className="flex items-center gap-6">
+          <div  className="flex items-center gap-6">
             <Link href="/" className="flex items-center gap-3">
               <svg
                 className="h-8 w-8 text-[#38e07b]"

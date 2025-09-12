@@ -20,8 +20,8 @@ import Image from "next/image.js";
 export default function Page() {
   return (
     <div className="min-h-screen  text-gray-900">
-      <Navbar className="p-6 border-b   text-white  bg-base-200 shadow-sm flex items-center justify-between" buttonLabels={["Anasayfa", "Ustalar","Paketler","İletişim","Hakkımızda"]}>
-      Sanayi Cebimde
+      <Navbar>
+    
       </Navbar>
         <main className="">
             <Hero/>
