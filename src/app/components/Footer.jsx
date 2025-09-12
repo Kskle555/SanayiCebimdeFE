@@ -56,7 +56,7 @@ export default function Footer({children}) {
 </div>
 </div>
 <div class="mt-12 border-t border-[#29382f] pt-8 text-center">
-<p class="text-base text-gray-400">© {children} Sanayicebimde. Tüm hakları saklıdır.</p>
+<p class="text-base text-gray-400">{children}</p>
 </div>
 </div>
 </footer>

@@ -43,7 +43,9 @@ export default function Page() {
     
       
         </main>
-    <Footer children={2025}/>
+    <Footer>
+        {`SanayiSepeti © ${new Date().getFullYear()}. Tüm hakları saklıdır.`}
+    </Footer>
       </div>
   );
 }

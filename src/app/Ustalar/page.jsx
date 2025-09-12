@@ -1,6 +1,6 @@
 'use client'
 import React, { useState,useEffect } from 'react';
-import { Navbar } from '../components/ui/navbar';
+import  Navbar  from '../components/ui/navbar';
 import Footer from '../components/Footer';
 import UstaCards from '../components/UstaCards';
 import FeaturedMaster from '../components/FeaturedMaster';
