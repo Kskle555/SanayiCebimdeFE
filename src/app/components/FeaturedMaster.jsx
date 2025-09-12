@@ -3,6 +3,7 @@ import React from 'react';
 export default function FeaturedMaster({ onFilterChange, filter }) {
   return (
     <section className="mt-5 p-8 rounded-xl">
+      {/* header */}
       <h2 className="text-2xl font-bold text-center mb-6 text-neutral">Öne Çıkan Ustalar</h2>
       <div className="flex flex-wrap justify-center gap-4 mb-4">
         <span 
