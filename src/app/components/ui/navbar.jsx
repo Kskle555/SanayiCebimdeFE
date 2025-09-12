@@ -90,7 +90,7 @@ export default function Navbar({
               <Link href="/login" className="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-6 bg-[#38e07b] text-[#111714] text-base font-bold leading-normal tracking-[0.015em] hover:bg-opacity-90 transition-colors">
                 <span className="truncate">Giriş Yap</span>
               </Link>
-              <Link href="/signup" className="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-6 bg-transparent border-2 border-[#38e07b] text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-[#38e07b] hover:text-[#111714] transition-colors">
+              <Link href="/register" className="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-6 bg-transparent border-2 border-[#38e07b] text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-[#38e07b] hover:text-[#111714] transition-colors">
                 <span className="truncate">Kaydol</span>
               </Link>
             </div>
