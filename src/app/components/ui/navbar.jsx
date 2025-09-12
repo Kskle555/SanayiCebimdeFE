@@ -149,7 +149,7 @@ export default function Navbar({
 
           <div className="flex gap-2">
             <Link href="/login" className="flex-1 inline-flex items-center justify-center rounded-full h-10 px-6 bg-[#38e07b] text-[#111714] font-bold">Giriş Yap</Link>
-            <Link href="/signup" className="flex-1 inline-flex items-center justify-center rounded-full h-10 px-6 border-2 border-[#38e07b] text-white font-bold">Kaydol</Link>
+            <Link href="/register" className="flex-1 inline-flex items-center justify-center rounded-full h-10 px-6 border-2 border-[#38e07b] text-white font-bold">Kaydol</Link>
           </div>
         </div>
       </div>
