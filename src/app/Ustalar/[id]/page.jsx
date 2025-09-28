@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { mockUstaData } from '@/app/data/mockUstaData';
-import { Navbar } from '../../components/ui/navbar';
+import  Navbar  from '../../components/ui/navbar';
 import Footer from '../../components/Footer';
 import UstaYorumlari from '../../components/UstaYorumlari';
 import UstaFotografGalerisi from '../../components/UstaFotografGalerisi';

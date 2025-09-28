@@ -1,10 +1,13 @@
-import { Navbar } from "./components/ui/navbar.jsx";
+import Navbar  from "./components/ui/navbar.jsx";
 import Footer from "./components/Footer.jsx";
 import { Testimonial } from "./components/Testimonial.jsx";
 import { Packages } from "./components/Packages.jsx";
 import { FAQ } from "./components/FAQ";
 import { WhyUs } from "./components/WhyUs";
-import { Hero } from "./components/Hero";
+import Hero from "./components/Hero";
+import FeaturesSection from "./components/FeaturesSection";
+import AboutSection from "./components/AboutSection.jsx";
+import CTASection from "./components/CTASection.jsx";
 import { HowItWorks } from "./components/HowItWorks";
 import {ServiceCategories} from "./components/ServiceCategories.jsx";
 import { StatisticsSection } from "./components/StatisticsSection.jsx";
@@ -16,15 +19,17 @@ import ContactBanner from "./components/ContactBanner.jsx";
 import Image from "next/image.js";
 export default function Page() {
   return (
-    <div className="min-h-screen bg-white text-gray-900">
-      <Navbar className="p-6 border-b   text-white  bg-base-200 shadow-sm flex items-center justify-between" buttonLabels={["Anasayfa", "Ustalar","Paketler","İletişim","Hakkımızda"]}>
-      Sanayi Cebimde
+    <div className="min-h-screen  text-gray-900">
+      <Navbar>
+    
       </Navbar>
-        <main className="px-6 py-16 max-w-6xl mx-auto text-center">
-           <ContactBanner/>
+        <main className="">
             <Hero/>
+            <FeaturesSection/>
+            <AboutSection/>
+            <CTASection/>
+           {/* <ContactBanner/>
             <LocationSearch/>
-          
             <WhyUs/>
             <Packages/>
           <HowItWorks/>
@@ -34,14 +39,13 @@ export default function Page() {
           <CtaForMasters/>
             <AiFaultFinder/>
            <LatestArticles/>
-          <FAQ/>
+          <FAQ/> */}
     
       
         </main>
-  
-     <Footer>
-  SanayiSepeti © 2025. Tüm hakları saklıdır.
-</Footer>
+    <Footer>
+        {`SanayiSepeti © ${new Date().getFullYear()}. Tüm hakları saklıdır.`}
+    </Footer>
       </div>
   );
 }
