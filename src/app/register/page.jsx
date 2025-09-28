@@ -114,7 +114,7 @@ export default function RegisterPage() {
             <div className="text-center">
               <span className="text-sm text-gray-500 dark:text-gray-400">
                 Zaten bir hesabın var mı?{' '}
-                <Link href="/login" className="link link-primary">
+                <Link href="/Login" className="link link-primary">
                   Giriş Yap
                 </Link>
               </span>
