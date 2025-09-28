@@ -14,7 +14,7 @@ export function FAQ() {
       },
       {
         question: "Paket iptali nasıl yapılır?",
-        answer: "Hesabınızdan istediğiniz zaman paket iptal işlemini gerçekleştirebilirsiniz."
+        answer: "Hesabınızdan istediğiniz zaman paket iptal işlemini gerçekleştirebilirsiniz.sss"
       },
     ]
   
