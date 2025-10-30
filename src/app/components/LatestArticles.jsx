@@ -30,7 +30,7 @@ export const LatestArticles = () => {
     <section className="py-16 bg-gray-50 text-center">
       <h2 className="text-3xl font-bold mb-2">Son Yazılarımız</h2>
       <p className="text-lg mb-10 text-gray-600">
-        Araç bakımı ve sanayi dünyasından en güncel bilgiler.
+        Araç bakımı ve sanayi dünyasından en güncel bilgiler. 
       </p>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {articles.map((article) => (
