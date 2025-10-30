@@ -7,7 +7,7 @@ export default function AboutSection() {
       icon: FileText,
       title: "İhtiyacını Belirt",
       description: "Aracınızın markası, modeli ve ihtiyacınız olan hizmeti girerek talebinizi oluşturun.",
-      color: "from-blue-400 to-blue-600"
+      color: "from-blue-400 to-blue-600" 
     },
     {
       number: "2", 
