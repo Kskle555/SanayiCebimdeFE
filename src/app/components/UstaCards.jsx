@@ -4,6 +4,8 @@ import { FaStar, FaMapMarker } from 'react-icons/fa';
 import useUstalarStore from '../store/useUstalarStore';
 
 export default function UstaCards({ filter }) {
+
+  // Zustand store'dan ustalar verisini ve fetch fonksiyonunu al
   const { ustalar, fetchUstalar } = useUstalarStore();
 
   useEffect(() => {
