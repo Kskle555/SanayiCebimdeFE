@@ -11,9 +11,9 @@ import Link from "next/link";
 export default function Navbar({
   logoText = "Sanayicebimde",
   links = [
-    { label: "Hizmetlerimiz", href: "#" },
-    { label: "Nasıl Çalışır", href: "#" },
-    { label: "Blog", href: "#" },
+    { label: "Hizmetlerimiz", href: "/Hizmetlerimiz" },
+    { label: "Nasıl Çalışır", href: "/Nasil-Calisir" },
+    { label: "Blog", href: "/Blog" },
     { label: "İletişim", href: "#" },
   ],
   onSearch,
