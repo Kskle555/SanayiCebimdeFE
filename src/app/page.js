@@ -23,8 +23,22 @@ export default function Page() {
       <Navbar>
     
       </Navbar>
+      <div className="w-full bg-green-500 text-white p-4 text-center">
+  <h1 className="font-bold">
+    İletişim için{" "}
+    <a
+      href="mailto:info@sanayicebimde.net"
+      className="underline"
+    >
+      info@sanayicebimde.net
+    </a>{" "}
+    adresine mail atınız.
+  </h1>
+</div>
+
         <main className="">
             <Hero/>
+           
             <FeaturesSection/>
             <AboutSection/>
             <CTASection/>
