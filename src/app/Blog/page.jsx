@@ -132,7 +132,7 @@ export default function BlogPage() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
         
-        {/* FEATURED POST (Öne Çıkan Yazı) */}
+        {/* FEATURED POST (Öne Çıkan Yazıı) */}
         <div className="mb-16 group cursor-pointer">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 bg-gray-800/50 border border-gray-700 rounded-3xl overflow-hidden hover:border-gray-600 transition-colors shadow-2xl shadow-black/20">
             {/* Image Side */}
