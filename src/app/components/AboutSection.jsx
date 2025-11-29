@@ -23,6 +23,7 @@ export default function AboutSection() {
       description: "Seçtiğiniz ustadan size uygun bir tarih ve saat için kolayca randevunuzu oluşturun.",
       color: "from-green-400 to-green-600"
     }
+    
   ];
 
   return (
