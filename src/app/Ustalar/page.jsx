@@ -53,9 +53,9 @@ export default function Page() {
         <MasterFaq className="max-w-3xl mx-auto my-20 px-4" />
       </main>
 
-      <footer className="footer footer-center p-10 bg-gray-950 text-gray-400 border-t border-gray-800">
+      
         <Footer>{`SanayiSepeti © ${bugun}. Tüm hakları saklıdır.`}</Footer>
-      </footer>
+      
     </div>
   );
 }
