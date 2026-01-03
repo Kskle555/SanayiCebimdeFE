@@ -1,23 +1,25 @@
-import React from 'react'
-
 export default function MasterStatistics() {
   return (
-    <section className="mt-16 mb-16 p-8 bg-gray-50 shadow-md   rounded-xl">
-  <h2 className="text-2xl font-bold text-center mb-6 text-neutral">İstatistikler</h2>
-  <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-    <div className="p-6 bg-white shadow-md rounded-lg">
-      <h3 className="text-xl font-semibold text-black">200+</h3>
-      <p className="text-sm text-gray-500">Aktif Usta</p>
-    </div>
-    <div className="p-6 bg-white shadow-md rounded-lg">
-      <h3 className="text-xl font-semibold text-black">95%</h3>
-      <p className="text-sm text-gray-500">Müşteri Memnuniyeti</p>
-    </div>
-    <div className="p-6 bg-white shadow-md rounded-lg">
-      <h3 className="text-xl font-semibold text-black">15+</h3>
-      <p className="text-sm text-gray-500">Şehirde Hizmet</p>
-    </div>
-  </div>
-</section>
-  )
+    <section className="container mx-auto px-4 py-20">
+      <div className="stats stats-vertical lg:stats-horizontal w-full bg-gray-800 border border-gray-700 shadow-xl">
+        <div className="stat place-items-center">
+          <div className="stat-title text-gray-400 font-medium">Aktif Usta</div>
+          <div className="stat-value text-amber-500">200+</div>
+          <div className="stat-desc text-gray-500">Tüm Türkiye genelinde</div>
+        </div>
+        
+        <div className="stat place-items-center border-gray-700">
+          <div className="stat-title text-gray-400 font-medium">Memnuniyet</div>
+          <div className="stat-value text-emerald-500">95%</div>
+          <div className="stat-desc text-gray-500">Başarılı iş teslimi</div>
+        </div>
+        
+        <div className="stat place-items-center border-gray-700">
+          <div className="stat-title text-gray-400 font-medium">Hizmet Bölgesi</div>
+          <div className="stat-value text-blue-500">15+</div>
+          <div className="stat-desc text-gray-500">Şehir ve ilçe</div>
+        </div>
+      </div>
+    </section>
+  );
 }
