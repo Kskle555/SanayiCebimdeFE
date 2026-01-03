@@ -12,6 +12,7 @@ import useUstalarStore from '../store/useUstalarStore';
 export default function Page() {
   const { fetchUstalar } = useUstalarStore();
   const [filter, setFilter] = useState('Hepsi');
+  const [selectedCity, setSelectedCity] = useState('Tüm Şehirler');
   const bugun = new Date().getFullYear();
 
   useEffect(() => {
@@ -36,10 +37,15 @@ export default function Page() {
         </div>
 
         <div className="container mx-auto px-4 -mt-8">
-          <FeaturedMaster onFilterChange={setFilter} filter={filter} />
+         <FeaturedMaster 
+  onFilterChange={setFilter} 
+  filter={filter} 
+  onCityChange={setSelectedCity} 
+  selectedCity={selectedCity} 
+/>
           <div className="mt-12">
-             <UstaCards filter={filter} />
-          </div>
+  <UstaCards filter={filter} city={selectedCity} />
+</div>
         </div>
 
         <MasterStatistics />

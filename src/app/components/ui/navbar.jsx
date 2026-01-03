@@ -12,6 +12,7 @@ export default function Navbar({
   logoText = "Sanayicebimde",
   links = [
     { label: "Hizmetlerimiz", href: "/Hizmetlerimiz" },
+    { label: "Ustalar", href: "/Ustalar" },
     { label: "Nasıl Çalışır", href: "/Nasil-Calisir" },
     { label: "Blog", href: "/Blog" },
     { label: "İletişim", href: "#" },
