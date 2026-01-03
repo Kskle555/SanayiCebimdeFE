@@ -1,11 +1,34 @@
 "use client";
 import React from 'react';
-import { FaStar, FaMapMarkerAlt, FaTools, FaChevronRight, FaPlus } from 'react-icons/fa';
+import { FaStar, FaMapMarkerAlt, FaTools, FaChevronRight, FaPlus,FaWhatsapp } from 'react-icons/fa';
 import useUstalarStore from '../store/useUstalarStore';
 
 export default function UstaCards({ filter, city }) {
 
   const { ustalar, fetchUstalar, hasMore, isLoading } = useUstalarStore();
+
+  const handleWhatsApp = (phone, name) => {
+    if (!phone) {
+      alert("Bu ustanın telefon numarası kayıtlı değil.");
+      return;
+    }
+
+    // Numarayı temizle (boşlukları, parantezleri vs. kaldır)
+    // Eğer numara 0 ile başlıyorsa başındaki 0'ı atıp Türkiye kodu olan 90'ı ekle
+    let cleanedPhone = phone.replace(/\D/g, ''); // Sadece rakamlar kalsın
+    if (cleanedPhone.startsWith('0')) {
+      cleanedPhone = '90' + cleanedPhone.substring(1);
+    } else if (!cleanedPhone.startsWith('90')) {
+      cleanedPhone = '90' + cleanedPhone;
+    }
+
+    const message = `Merhaba ${name} usta, SanayiSepeti üzerinden size ulaşıyorum. Bir konu hakkında bilgi alabilir miyim?`;
+    const encodedMessage = encodeURIComponent(message);
+    
+    // WhatsApp URL'ini oluştur ve yeni sekmede aç
+    const whatsappUrl = `https://wa.me/${cleanedPhone}?text=${encodedMessage}`;
+    window.open(whatsappUrl, '_blank');
+  };
 
   // 1. Filtreleme ve Sıralama Mantığı
   let filteredUstalar = [...ustalar];
@@ -64,9 +87,13 @@ export default function UstaCards({ filter, city }) {
                   </div>
 
                   <div className="grid grid-cols-2 gap-3">
-                    <button className="btn btn-md bg-amber-500 hover:bg-amber-600 border-none text-black font-bold rounded-xl transition-all">
-                      İletişime Geç
-                    </button>
+                  <button 
+                  onClick={() => handleWhatsApp(usta.phone, usta.name)}
+                  className="btn btn-md bg-emerald-600 hover:bg-emerald-700 border-none text-white font-bold rounded-xl transition-all active:scale-95 gap-2"
+                >
+                  <FaWhatsapp size={18} />
+                  İletişime Geç
+                </button>
                     <button onClick={() => window.location.href = `/Ustalar/${usta.id}`} className="btn btn-md btn-outline border-gray-600 hover:bg-gray-700 text-gray-300 rounded-xl">
                       Profil
                     </button>
