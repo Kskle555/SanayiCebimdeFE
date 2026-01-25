@@ -13,7 +13,7 @@ export default function UstaCards({ filter, city }) {
       return;
     }
 
-    // Numarayı temizle (boşlukları, parantezleri vs. kaldır)
+    // Numarayı temizle (boşlukları, parantezleri vs. kaldır)s
     // Eğer numara 0 ile başlıyorsa başındaki 0'ı atıp Türkiye kodu olan 90'ı eklee
     let cleanedPhone = phone.replace(/\D/g, ''); // Sadece rakamlar kalsın
     if (cleanedPhone.startsWith('0')) {
