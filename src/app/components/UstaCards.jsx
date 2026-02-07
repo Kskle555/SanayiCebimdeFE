@@ -22,7 +22,7 @@ export default function UstaCards({ filter, city }) {
       cleanedPhone = '90' + cleanedPhone;
     }
 
-    const message = `Merhaba ${name} usta, SanayiSepeti üzerinden size ulaşıyorum. Bir konu hakkında bilgi alabilir miyim?`;
+    const message = `Merhaba ${name} usta, SanayiSepeti üzerinden size ulaşıyorum. Bir konu hakkındaa bilgi alabilir miyim?`;
     const encodedMessage = encodeURIComponent(message);
     
     // WhatsApp URL'ini oluştur ve yeni sekmede aç
