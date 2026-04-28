@@ -6,10 +6,6 @@ import { User, Lock } from "lucide-react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 
-
-
-
-
 export default function LoginPage() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -17,21 +13,12 @@ export default function LoginPage() {
   const [error, setError] = useState(null);
   const router = useRouter();
 
-
-
-
-
-
-
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
     setError(null);
 
     try {
-
-
       const response = await fetch("/api/login", {
         method: "POST",
         headers: {
@@ -119,8 +106,6 @@ export default function LoginPage() {
                 <span>{error}</span>
               </div>
             )}
-
-            
 
             <button type="submit" className="btn btn-primary w-full" disabled={loading}>
               {loading && <span className="loading loading-spinner"></span>}
