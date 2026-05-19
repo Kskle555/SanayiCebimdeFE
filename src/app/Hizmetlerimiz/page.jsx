@@ -1,13 +1,10 @@
 import React from 'react';
 import Link from 'next/link';
-import { 
-  Wrench, Car, Battery, Activity, ShieldCheck, PenTool, 
-  Search, Calendar, CheckCircle, HelpCircle, Phone 
-} from 'lucide-react';
+import { Wrench, Car, Battery, Activity, ShieldCheck, PenTool,Search, Calendar, CheckCircle, HelpCircle, Phone } from 'lucide-react';
 import Navbar from '../components/ui/navbar';
 import Footer from '../components/Footer';
 
-// --- VERİ KATMANI ---
+// --- VERİ KATMANI ----
 
 // Hizmetler Verisi
 const hizmetlerData = [
